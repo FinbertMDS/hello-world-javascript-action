@@ -8,5 +8,12 @@
   "dependencies": {
     "@actions/core": "^1.2.7",
     "@actions/github": "^4.0.0"
+  },
+  "scripts": {
+    "build": "ncc build src/index.ts",
+    "package": "cp action.yml README.md dist/"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.3"
   }
 }
