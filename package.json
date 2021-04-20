@@ -10,7 +10,7 @@
     "@actions/github": "^4.0.0"
   },
   "scripts": {
-    "build": "ncc build src/index.ts",
+    "build": "ncc build index.js",
     "package": "cp action.yml README.md dist/"
   },
   "devDependencies": {

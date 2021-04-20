@@ -20,7 +20,7 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-      - run: yarn --frozen-lockfile --prefer-offline
+      - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn package
 
@@ -44,7 +44,7 @@ jobs:
           ref: 'latest'
           path: 'dist'
 
-      - run: yarn --frozen-lockfile --prefer-offline
+      - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn package
       - name: Setup git
